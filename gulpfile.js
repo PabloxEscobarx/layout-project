@@ -1,7 +1,8 @@
-const firstTask = done => {
-    console.log('My First Hexlet Task');
+const { src, dest } = require('gulp');
 
-    done();
+const copyFile = () => {
+    return src('dist/scss/index.scss')
+        .pipe(dest('build/styles'));
 };
 
-exports.default = firstTask;
+exports.default = copyFile;
